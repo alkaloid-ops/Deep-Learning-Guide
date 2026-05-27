@@ -15,6 +15,7 @@ $$
         
 - 填充padding：当遇到卷积核水平或垂直方向平移扫描最后一步无法适配尺寸（如5x5的图像用3x3的卷积核扫描，步长step为3，第二次扫描时，图像只剩下两列像素，3x3的卷积核无法覆盖）这时使用padding对图像进行填充，（填充方式有zero和circular，zaro直接在图像的四边填充值为0的像素，数量为2xpadding，circular则是在图的环形填充值为和边缘行或列一样的像素
     - 特征图（带padding）尺寸计算公式
+      
 $$
 W_{out}=\frac{W_{in}-K_{W}+2P}{Stride}+1 \quad H_{out}=\frac{H_{in}-K_{H}+2P}{Stride}+1 \quad (其中P是填充padding)
 $$
